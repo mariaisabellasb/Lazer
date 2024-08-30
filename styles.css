@@ -1,0 +1,157 @@
+/* Estilos gerais e ajustes existentes */
+
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: rgb(126, 10, 10);
+    overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+    margin: 0; /* Garante que não haja margem padrão */
+    padding: 0; /* Garante que não haja padding padrão */
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    position: fixed; /* Garante que o cabeçalho fique fixo no topo */
+    top: 0; /* Fixar no topo */
+    left: 0;
+}
+
+nav {
+    position: fixed; 
+    left: 0;
+    height: calc(100%); /* Ajusta a altura do menu para não afetar o cabeçalho */
+    width: 20%;
+    background-color:  rgba(82, 4, 4, 0.582);
+    overflow-x: hidden;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+nav ul {           
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 10px;
+}
+
+nav a {
+    padding: 10px 15px;
+    color:  rgb(0, 3, 8);
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+}
+
+nav a:hover {
+    background-color:  rgb(121, 150, 170);
+}
+
+.content {
+    padding: 20px;
+    margin-top: 70px; /* Ajusta o espaçamento superior para o conteúdo não ficar escondido atrás do cabeçalho */
+    margin-bottom: 60px; /* Ajuste conforme necessário para o rodapé */
+}
+
+.menu-button {
+    background-color:  rgba(105, 28, 141, 0);
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+    border-radius: 60px;
+    z-index: 3; /* Garante que o botão fique acima do menu lateral */
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent; 
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000af;
+    color: #addeff;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    #entretenimento img {
+        width: 10px; /* Ajuste para tamanhos menores de tela */
+    }
+
+    .musicas img {
+        width: 10px; /* Ajuste para tamanhos menores de tela */
+    }
+}
+
+
+#entretenimento {
+    text-align: center;
+}
+
+#entretenimento img {
+    width: 20%; /* Ajuste o valor conforme necessário */
+}
+
+.entretenimento-grid a {
+    text-decoration: none;
+    color: #9ccfdf; /* Cor do link para destacar */
+    transition: color 0.3s ease; /* Transição suave para a mudança de cor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Times New Roman', serif; /* Aplica a fonte Times New Roman aos links */
+}
+
+.cabecalho {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(148, 22, 22, 0.726);
+}
+
+.musicas img {
+    width: 10%; /* Ajuste o valor conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+.musicas img {
+    width: 30%;
+    float: left;
+}
+
+h3 {
+    text-align: center;
+    padding: 50px;
+}
+
+h1{
+    text-align: center;
+    padding: 20px;
+}
+
+p{
+    text-align: center;
+    padding: 5px;
+}
+
+#logo{
+    margin-left: 37%;
+    margin-top: 2%;
+}
