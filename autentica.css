@@ -1,12 +1,19 @@
 .signup-container {
-    margin-left: 35%;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 600px;
+    box-shadow: 0 0 10px rgb(255, 3, 3);
+    width: 40%;
+    margin-left: 30%;
     text-align: center;
+}
+
+
+@media (max-width: 800px) {
+    .signup-container {
+        width: 90%;
+        margin-left: 5%;
+    }
 }
 .signup-container h2 {
     margin-bottom: 20px;
@@ -21,7 +28,7 @@
     box-sizing: border-box;
 }
 .signup-container input[type="submit"] {
-    background-color: #007bff;
+    background-color:#610a0a;
     color: #fff;
     border: none;
     padding: 10px;
@@ -30,7 +37,7 @@
     font-size: 16px;
 }
 .signup-container input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #610a0aaf;
 }
 .message {
     margin: 10px 0;
@@ -43,9 +50,9 @@
     border: 1px solid #f5c6cb;
 }
 .success {
-    color: #28a745;
-    background-color: #d4edda;
-    border: 1px solid #c3e6cb;
+    color: #f0e4e4;
+    background-color: #5e1818;
+    border: 1px solid #ddd2d2;
 }
 .error, .success {
     font-size: 14px;

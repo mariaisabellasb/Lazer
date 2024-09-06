@@ -18,9 +18,9 @@
     </header>
     <main>
         <div class="content">
-            <h1>CINEMUSIC</h1>
-            <p> Cadastre-se em nosso site para assistir os melhores filmes e ouvir as melhores músicas da atualidade!</p>
-            <img  id="logo" src="img/Blue Typography Initial SD Logo.png">
+            <h1 class="titulo">CINEMUSIC</h1>
+            <p class="subtitulo"> Cadastre-se em nosso site para assistir os melhores filmes e ouvir as melhores músicas da atualidade!</p>
+            <img  id="logo" src="img/CINE.png">
         
         </div>
         

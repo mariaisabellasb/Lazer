@@ -4,6 +4,7 @@ session_start(); // Iniciar a sessão
 include '../banco/conexao.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
     // Receber dados do formulário
     $nome = $_POST['nome'];
     $senha = $_POST['senha'];
@@ -14,13 +15,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ss", $nome, $senha);
     $stmt->execute();
     $result = $stmt->get_result();
-
+   
     // Verificar se há um resultado
     if ($result->num_rows == 1) {
         // Login bem-sucedido
         $_SESSION['loggedin'] = true;
         $_SESSION['nome'] = $nome;
-        header("Location: ../sobre.php"); // Redirecionar para uma página de boas-vindas ou painel
+        $row = $result->fetch_assoc();
+        $_SESSION['user_id'] = $row['id'];
+        header("Location: ../perfil.php"); // Redirecionar para a página de perfil
+        //header("Location: ../sobre.php"); // Redirecionar para uma página de boas-vindas ou painel
         exit();
     } else {
         // Login falhou

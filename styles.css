@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: rgb(126, 10, 10);
+    background-color: rgb(0, 0, 0);
     overflow-x: hidden; /* Evita a barra de rolagem horizontal */
     margin: 0; /* Garante que não haja margem padrão */
     padding: 0; /* Garante que não haja padding padrão */
@@ -28,7 +28,7 @@ nav {
     left: 0;
     height: calc(100%); /* Ajusta a altura do menu para não afetar o cabeçalho */
     width: 20%;
-    background-color:  rgba(82, 4, 4, 0.582);
+    background-color:  #610a0aaf;
     overflow-x: hidden;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
@@ -46,14 +46,14 @@ nav li {
 
 nav a {
     padding: 10px 15px;
-    color:  rgb(0, 3, 8);
+    color:  #e6e6dd;
     display: block;
     text-decoration: none;
     transition: background-color 0.3s ease; /* Transição suave para o hover */
 }
 
 nav a:hover {
-    background-color:  rgb(121, 150, 170);
+    background-color:  rgba(148, 36, 22, 0.219);
 }
 
 .content {
@@ -63,7 +63,7 @@ nav a:hover {
 }
 
 .menu-button {
-    background-color:  rgba(105, 28, 141, 0);
+    background-color:  rgb(83, 10, 10);
     position: fixed;
     top: 10px;
     left: 10px;
@@ -82,35 +82,84 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #000000af;
-    color: #addeff;
+    background-color: #610a0aaf;
+    color: #e6e6dd;
     text-align: center;
     padding: 10px;
     font-size: 0.9em;
 }
 
-@media (max-width: 768px) {
-    #entretenimento img {
-        width: 10px; /* Ajuste para tamanhos menores de tela */
+
+
+@media (max-width: 700px) {
+    .entretenimento-grid a img {
+        width: 30%; /* Ajuste para tamanhos menores de tela */
     }
 
     .musicas img {
         width: 10px; /* Ajuste para tamanhos menores de tela */
     }
+
+    #sidebar{
+        width: 35%;
+    }    
 }
 
+/* Adiciona uma largura máxima à logo para que ela não ultrapasse o tamanho do contêiner */
+#logo {
+    max-width: 100%; /* Faz com que a imagem se ajuste à largura do contêiner */
+    height: auto;    /* Mantém a proporção da imagem */
+    display: block;  /* Remove o espaço embaixo da imagem */
+    margin: 0 auto;  /* Centraliza a imagem horizontalmente */
+}
+/* Contêiner da logo */
+.logo-container {
+    text-align: center; /* Centraliza o conteúdo do contêiner */
+    margin: 20px 0; /* Margem superior e inferior para espaçamento */
+}
+
+/* Estilos para a logo */
+#logo {
+    max-width: 100%; /* Faz com que a imagem se ajuste à largura do contêiner */
+    height: auto;    /* Mantém a proporção da imagem */
+    display: inline-block; /* Faz com que a imagem se comporte como um bloco dentro do contêiner */
+}
+
+
+/* Responsividade adicional para dispositivos móveis */
+
+@media (max-width: 768px) {
+    #logo {
+        max-width: 80%; /* Reduz a largura máxima da logo em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        max-width: 60%; /* Reduz ainda mais a largura máxima da logo em telas muito pequenas */
+    }
+}
 
 #entretenimento {
     text-align: center;
 }
 
-#entretenimento img {
-    width: 20%; /* Ajuste o valor conforme necessário */
+#entretenimento h2 {
+    color:#e6e6dd
+   
+}
+
+.entretenimento-item h3{
+ color: #e6e6dd;
+}
+
+#entretenimento a img {
+    width: 30%; /* Ajuste o valor conforme necessário */
 }
 
 .entretenimento-grid a {
     text-decoration: none;
-    color: #9ccfdf; /* Cor do link para destacar */
+    color: #e6e6dd; /* Cor do link para destacar */
     transition: color 0.3s ease; /* Transição suave para a mudança de cor */
     display: flex;
     flex-direction: column;
@@ -122,7 +171,11 @@ footer {
 .cabecalho {
     position: fixed;
     width: 100%;
-    background-color: rgba(148, 22, 22, 0.726);
+    background-color: rgb(59, 5, 5);
+}
+
+.cabecalho {
+    color:#e6e6dd;
 }
 
 .musicas img {
@@ -151,7 +204,121 @@ p{
     padding: 5px;
 }
 
+
+
+.titulo{
+    color:#e6e6dd;
+}
+
+.subtitulo{
+    color:#e6e6dd;
+}
+
+header p{
+    color: #fff;
+}
+
+.content p{
+    color: #e6e6dd;
+}
+
+.content h1{
+    color:#e6e6dd
+}
+
+img{
+    width: 30;
+}
+
 #logo{
     margin-left: 37%;
-    margin-top: 2%;
+    margin-top: 2%;    
 }
+
+@media (min-width: 1257px) {
+    #logo{
+        margin-left: 37%; 
+    }
+}
+
+@media (max-width: 831px) {
+    #logo{
+        margin-left: 15%; 
+    }
+}
+
+
+
+
+
+/* styles.css */
+
+
+/* Estilo para o botão do menu */
+
+/* Estilo básico para centralizar o conteúdo principal */
+main {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto; /* Ajustar para deixar espaço no topo para o botão de menu */
+}
+
+/* Estilo para os formulários */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"],
+button {
+    display: block;
+
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para a imagem de perfil */
+img {
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+}
+
+/* Estilo para o link de sair */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn-form {
+    width: 100%;
+}
+
